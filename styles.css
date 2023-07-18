@@ -1,0 +1,106 @@
+/* Set global styles for the document */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the header section */
+  header {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Center align the banner content */
+  .banner {
+    text-align: center;
+  }
+  
+  /* Style the heading within the banner */
+  .banner h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Add some margin to the paragraphs within the banner */
+  .banner p {
+    margin: 5px 0;
+  }
+  
+  /* Style the main content area */
+  main {
+    padding: 20px;
+  }
+  
+  /* Style the form element */
+  form {
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Add margin at the bottom of each form group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Style the labels within the form */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Style the text input, email input, and textarea */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style the button elements */
+  button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    margin-right: 10px;
+  }
+  
+  /* Style the button with type "clear" */
+  button[type="clear"] {
+    background-color: #f44336;
+  }
+
+  /* Style the button with type "download" */
+  button[type="download"] {
+    background-color: #2600fc;
+  }
+
+  /* Style the button with type "print" */
+  button[type="print"] {
+    background-color: #000000;
+  }
+  
+  /* Add opacity on button hover */
+  button:hover {
+    opacity: 0.8;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }

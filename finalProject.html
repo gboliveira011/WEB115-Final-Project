@@ -1,40 +1,122 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>WEB-115 Final Project</title>
+  <title>WEB-115 Final Project</title>
+  <meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" type = "text/css" href = "styles.css">
 </head>
-
 <body>
-<h1>Build Your Meal Plan</h1>
-<h2>Gabe Oliveira (WEB-115 Section 0003)</h2>
-<form id = "myForm">
+  <header>
+    <div class="banner">
+      <p>Gabe Oliveira (WEB-115 Section 0003)</p>
+      <img id="headerImage" src="PerfectlyPortionedFitness.png" alt="Header Image">
+      <p>Build Your Meal Plan</p>
+      <p>Name: <span id="name"></span></p>
+      <p>Email: <span id="email"></span></p>
+      <p>Goal: <span id="goal"></span></p>
+    </div>
+  </header>
 
+  <main>
+    <h2>Meal Planner</h2>
+    <form id="mealPlanForm">
+      <!-- Personal Information Section -->
+      <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" required>
+      </div>
+      <div class="form-group">
+        <label for="emailInput">Email:</label>
+        <input type="email" id="emailInput" required>
+      </div>
+      <div class="form-group">
+        <label for="goalInput">Goal for the Week:</label>
+        <textarea id="goalInput" required></textarea>
+      </div>
+      
+      <!-- Meal Plan Section -->
+      <h3>Meal Plan</h3>
 
-<input type = "text" id = "name" value = "Name" />
-<br>
-<br>
-<input type = "text" id = "email" value = "Email" />
-<br>
-<br>
-<input type = "text" id = "goal" value = "Goal" />
-<br>
-<br>
-<input type = "text" id = "breakfast" value = "Breakfast" />
-<br>
-<br>
-<input type = "text" id = "firstSnack" value = "Snack #1" />
-<br>
-<br>
-<input type = "text" id = "lunch" value = "Lunch" />
-<br>
-<br>
-<input type = "text" id = "secondSnack" value = "Snack #2" />
-<br>
-<br>
-<input type = "text" id = "dinner" value = "Dinner" />
-<br>
-<br>
-<input type = "button" id = "myButton" value = "Build">
-</form>
-<script src="projectJS.js"></script>
+      <table id="planTable">
+        <thead>  
+          <tr>
+            <th>Day</th>
+            <th>Breakfast</th>
+            <th>Snack 1</th>
+            <th>Lunch</th>
+            <th>Snack 2</th>
+            <th>Dinner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="cell-0-0">Monday</td>
+            <td><input type="text" id="cell-0-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-0-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-0-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-0-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-0-5" class="meal-input" required></td>
+          </tr>
+          <tr>
+            <td id="cell-1-0">Tuesday</td>
+            <td><input type="text" id="cell-1-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-1-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-1-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-1-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-1-5" class="meal-input" required></td>
+          </tr>
+          <tr>
+            <td id="cell-2-0">Wednesday</td>
+            <td><input type="text" id="cell-2-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-2-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-2-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-2-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-2-5" class="meal-input" required></td>
+          </tr>
+          <tr>
+            <td id="cell-3-0">Thursday</td>
+            <td><input type="text" id="cell-3-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-3-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-3-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-3-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-3-5" class="meal-input" required></td>
+          </tr>
+          <tr>
+            <td id="cell-4-0">Friday</td>
+            <td><input type="text" id="cell-4-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-4-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-4-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-4-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-4-5" class="meal-input" required></td>
+          </tr>
+          <tr>
+            <td id="cell-5-0">Saturday</td>
+            <td><input type="text" id="cell-5-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-5-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-5-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-5-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-5-5" class="meal-input" required></td>
+          </tr>
+          <tr>
+            <td id="cell-6-0">Sunday</td>
+            <td><input type="text" id="cell-6-1" class="meal-input" required></td>
+            <td><input type="text" id="cell-6-2" class="meal-input" required></td>
+            <td><input type="text" id="cell-6-3" class="meal-input" required></td>
+            <td><input type="text" id="cell-6-4" class="meal-input" required></td>
+            <td><input type="text" id="cell-6-5" class="meal-input" required></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-group">
+        <button type="submit">Generate Meal Plan</button>
+        <button type="clear" id="clearButton">Clear Plan</button>
+        <button type="download" id="downloadButton">Download Plan</button>
+        <button type="print" id="printButton">Print Plan</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="projectJS.js"></script>
 </body>
 </html>
